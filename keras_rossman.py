@@ -35,8 +35,6 @@ df["day"] = df["Date"].dt.day
 df["week"] = df["Date"].dt.isocalendar().week
 df["month"] = df["Date"].dt.month
 df["year"] = df["Date"].dt.year
-
-df.head()
 df["season"] = np.where(df["month"].isin([3, 4, 5]), "Spring",
            np.where(df["month"].isin([6, 7, 8]), "Summer",
               np.where(df["month"].isin([9, 10, 11]), "Autumn",
